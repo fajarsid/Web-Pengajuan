@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <title>Form</title>
+  </head>
+  <body>
+    <!-- Form -->
+    <div class="container-form" id="form-pengajun">
+      <div class="title">Form Pengajuan</div>
+      <div class="content">
+        <form action="#">
+          <div class="user-details">
+            <div class="input-box js">
+              <span class="details">Jenis Surat</span>
+              <select name="jk" class="input-box">
+                <option value="">Jenis Surat</option>
+                <option value="Skck">Permohonan Rekomendasi SKCK</option>
+                <option value="Pin">Surat Keterangan Pindah</option>
+                <option value="Rt">Surat Pengantar RT/RW</option>
+                <option value="dom">Surat Keterangan Domisili</option>
+              </select>
+            </div>
+            <div class="input-box">
+              <span class="details">Nama Lengkap</span>
+              <input type="text" placeholder="Masukan nama anda" required />
+            </div>
+            <div class="input-box">
+              <span class="details">NIK</span>
+              <input type="number" placeholder="Masukan NIK" required />
+            </div>
+            <div class="input-box">
+              <span class="details">Email</span>
+              <input type="text" placeholder="Masukan email" required />
+            </div>
+            <div class="input-box">
+              <span class="details">No Handphone</span>
+              <input type="text" placeholder="Masukan no telpon" required />
+            </div>
+          </div>
+          <div class="input-box">
+            <span class="details">Alamat</span>
+            <textarea type="textarea"></textarea>
+          </div>
+          <div class="jk-details">
+            <input type="radio" name="jk" id="dot-1" />
+            <input type="radio" name="jk" id="dot-2" />
+            <span class="jk-title">Jenis Kelamin</span>
+            <div class="category">
+              <label for="dot-1">
+                <span class="dot one"></span>
+                <span class="jk">Laki-Laki</span>
+              </label>
+              <label for="dot-2">
+                <span class="dot two"></span>
+                <span class="jk">Perempuan</span>
+              </label>
+            </div>
+          </div>
+          <div class="button">
+            <input type="submit" value="Simpan" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Akhir Form -->
+  </body>
+</html>
