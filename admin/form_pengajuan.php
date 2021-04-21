@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../css/style.css" />
 
-    <link rel="stylesheet" href="../css/style.css" />
-
-    <title>Form Pengajuan</title>
-  </head>
-  <body>
     <!-- Form -->
     <div class="container-form" id="form-pengajun">
       <div class="title">Form Pengajuan</div>
@@ -70,23 +60,20 @@
     </div>
     <!-- Akhir Form -->
 
-  <!-- <?php
-  include "koneksi.php";
 
-  if(isset($_POST['proses'])){
-    mysqli_query($koneksi, "insert into pengajuan set 
-    nama = '$_POST[nama]',
-    nik = '$_POST[nik]',
-    email = '$_POST[email]',
-    hp = '$_POST[hp]',
-    alamat = '$_POST[alamat]',
-    jk = '$_POST[jk]'
-    ");
+ <?php
+  // include "koneksi.php";
 
-    echo 'Pengajuan telah tersimpan';
-  }
+  // if(isset($_POST['proses'])){
+  //   mysqli_query($koneksi, "insert into pengajuan set 
+  //   nama = '$_POST[nama]',
+  //   nik = '$_POST[nik]',
+  //   email = '$_POST[email]',
+  //   hp = '$_POST[hp]',
+  //   alamat = '$_POST[alamat]',
+  //   jk = '$_POST[jk]'
+  //   ");
 
-
-  ?> -->
-  </body>
-</html>
+  //   echo 'Pengajuan telah tersimpan';
+  // }
+  ?> 
