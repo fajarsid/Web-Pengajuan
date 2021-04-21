@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -12,8 +7,6 @@
     />
     <link rel="stylesheet" href="../css/home.css">
     <title>Administator</title>
-  </head>
-  <body>
     <div class="container">
         <nav class="navbar">
           <div class="nav_icon" onclick="toggleSidebar()">
@@ -74,7 +67,7 @@
             <h2>Form</h2>
             <div class="sidebar__link">
               <i class="fa fa-user-secret" aria-hidden="true"></i>
-              <a href="list_pengajuan.html">List Pengajuan</a>
+              <a href="list_pengajuan.php">List Pengajuan</a>
             </div>
             <div class="sidebar__link">
               <i class="fa fa-building-o"></i>
@@ -90,5 +83,3 @@
         </div>
       </div>
     </div>
-  </body>
-</html>

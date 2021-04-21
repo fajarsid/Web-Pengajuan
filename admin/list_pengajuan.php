@@ -1,20 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.14/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../css/style.css" />
     <title>List Pengajuan</title>
-  </head>
-  <body>
+
     <div class="container p-30" id="list">
       <div class="row">
-        <div class="col-md-11 main-datatable">
+        <div class="col-12 main-datatable">
           <div class="card_body">
             <div class="row d-flex">
               <div class="col-sm-4 createSegment">
@@ -28,30 +22,22 @@
               </div>
             </div>
             <div class="overflow-x">
-              <table style="width: 100%" id="filtertable" class="table cust-datatable dataTable no-footer">
+              <table id="filtertable" class="table cust-datatable dataTable no-footer">
                 <thead>
                   <tr>
-                    <th style="max-width: 20px">ID</th>
-                    <th style="min-width: 50px">Nama</th>
-                    <th style="min-width: 150px">NIK</th>
-                    <th style="min-width: 100px">Email</th>
-                    <th style="min-width: 100px">No Handphone</th>
-                    <th style="min-width: 150px">Alamat</th>
-                    <th style="min-width: 10px">Jenis Kelamin</th>
-                    <th style="min-width: 150px">Jenis Surat</th>
-                    <th style="min-width: 150px">Action</th>
+                    <th >No</th>
+                    <th >Nama</th>
+                    <th >NIK</th>
+                    <th >Email</th>
+                    <th >No Handphone</th>
+                    <th >Alamat</th>
+                    <th >Jenis Kelamin</th>
+                    <th >Jenis Surat</th>
+                    <th >Action</th>
                   </tr>
                 </thead>
-                <tbody>
+                <!-- <tbody>
                   <tr>
-                    <td>1</td>
-                    <td>Faishal</td>
-                    <td>12345678990</td>
-                    <td>isal@isal.com</td>
-                    <td>09878789982</td>
-                    <td>Sukabumi Jawa Barat Indonesia</td>
-                    <td>L</td>
-                    <td>Permohonan Keterangan Pindah</td>
                     <td>
                       <span class="actionCust">
                         <a href="#"><i class="far fa-edit"></i></a>
@@ -64,12 +50,38 @@
                       </span>
                     </td>
                   </tr>
-                </tbody>
+                </tbody> -->
+                <?php
+                include "../koneksi.php";
+                $no=1;
+                $ambildata = mysqli_query($connect, "select * from pengajuan");
+                while ($tampil = mysqli_fetch_array($ambildata)){
+                  echo "
+                  <tr>
+                      <td>$no</td>
+                      <td>$tampil[nama]</td>
+                      <td>$tampil[nik]</td>
+                      <td>$tampil[email]</td>
+                      <td>$tampil[hp]</td>
+                      <td>$tampil[alamat]</td>
+                      <td>$tampil[jk]</td>
+                      <td>$tampil[jsurat]</td>
+                  </tr>              
+                  ";
+
+                  $no++;
+                }
+
+
+
+
+
+
+                ?>
               </table>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </body>
-</html>
+

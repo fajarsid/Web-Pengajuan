@@ -9,7 +9,7 @@ if ($row['username'] == $username AND $row['password'] == $pass)
   session_start();
   $_SESSION['username'] = $row['username'];
   $_SESSION['password'] = $row['password'];
-  header('location:admin/index.html');
+  header('location:admin/index.php');
   }else{
    echo "<script>alert('Username atau Password Admin tidak benar !!!');</script>";
     echo "<script>location='index.php';</script>";

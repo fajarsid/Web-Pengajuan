@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="../css/style.css" />
+<title>Form Pengajuan</title>
 
     <!-- Form -->
     <div class="container-form" id="form-pengajun">
