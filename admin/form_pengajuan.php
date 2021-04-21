@@ -8,12 +8,14 @@
           <div class="user-details">
             <div class="input-box js">
               <span class="details">Jenis Surat</span>
-              <select name="jk" class="jk-details">
+              <select name="jsurat" class="jk-details">
                 <option value="">Jenis Surat</option>
-                <option value="Skck">Permohonan Rekomendasi SKCK</option>
+                <option value="Skck">Surat Keterangan KTP</option>
                 <option value="Pin">Surat Keterangan Pindah</option>
-                <option value="Rt">Surat Pengantar RT/RW</option>
                 <option value="dom">Surat Keterangan Domisili</option>
+                <option value="Rt">Kartu Keluarga</option>
+                <option value="Rt">Akta Kelahiran</option>
+                <option value="Rt">Akta Kematian</option>
               </select>
             </div>
             <div class="input-box">
@@ -62,18 +64,19 @@
 
 
  <?php
-  // include "koneksi.php";
+  include "../koneksi.php";
 
-  // if(isset($_POST['proses'])){
-  //   mysqli_query($koneksi, "insert into pengajuan set 
-  //   nama = '$_POST[nama]',
-  //   nik = '$_POST[nik]',
-  //   email = '$_POST[email]',
-  //   hp = '$_POST[hp]',
-  //   alamat = '$_POST[alamat]',
-  //   jk = '$_POST[jk]'
-  //   ");
+  if(isset($_POST['proses'])){
+    mysqli_query($connect, "insert into pengajuan set 
+    nama = '$_POST[nama]',
+    nik = '$_POST[nik]',
+    email = '$_POST[email]',
+    hp = '$_POST[hp]',
+    alamat = '$_POST[alamat]',
+    jk = '$_POST[jk]',
+    jsurat = '$_POST[jsurat]'
+    ");
 
-  //   echo 'Pengajuan telah tersimpan';
-  // }
+    echo 'Pengajuan telah tersimpan';
+  }
   ?> 
