@@ -307,7 +307,7 @@ a:hover {
 }
 
 /* Form */
-form {
+.form-surat {
   width: 600px;
   height: 550px;
   margin-top: 20px;
@@ -421,28 +421,146 @@ form .button input:hover {
   background: linear-gradient(-135deg, #71b7e6, #9b59b6);
 }
 
-/* 
-@media (max-width: 584px) {
-  .container {
-    max-width: 100%;
-  }
-  form .user-details .input-box {
-    margin-bottom: 15px;
-    width: 100%;
-  }
-  form .category {
-    width: 100%;
-  }
-  .content form .user-details {
-    max-height: 300px;
-    overflow-y: scroll;
-  }
-  .user-details::-webkit-scrollbar {
-    width: 5px;
-  }
+/* Tabel */
+
+.p-30 {
+  padding: 30px;
 }
-@media (max-width: 459px) {
-  .container .content .category {
-    flex-direction: column;
-  }
-} */
+.main-datatable {
+  padding: 0px;
+  border: 1px solid #f3f2f2;
+  border-bottom: 0;
+  border-radius: 15px;
+  box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
+}
+.d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card_body {
+  background-color: white;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.main-datatable .row {
+  margin: 0;
+}
+.searchInput {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: flex-end;
+  margin: 20px 0px;
+  padding: 0px 4px;
+}
+.searchInput input {
+  border: 1px solid #e5e5e5;
+  border-radius: 50px;
+  margin-left: 8px;
+  height: 34px;
+  width: 100%;
+  padding: 0px 25px 0px 10px;
+  transition: all 0.6s ease;
+}
+.searchInput label {
+  color: #767676;
+  font-weight: normal;
+}
+.searchInput input:placeholder-shown {
+  width: 13%;
+}
+.searchInput:hover input:placeholder-shown {
+  width: 100%;
+  cursor: pointer;
+}
+.searchInput:after {
+  font-family: "FontAwesome";
+  color: #d4d4d4;
+  position: relative;
+  content: "\f002";
+  right: 25px;
+}
+
+.dim_button {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 6px;
+  background: rgb(57, 85, 136);
+  margin-right: 10px;
+  position: relative;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.createSegment a {
+  margin-bottom: 0px;
+  border-radius: 50px;
+  background: #ffffff;
+  border: 1px solid #0fa4b4;
+  color: #0fa4b4;
+  transition: all 0.4s ease;
+}
+.createSegment a:hover,
+.createSegment a:focus {
+  transition: all 0.4s ease;
+  background: #0fa4b4;
+  color: #fff;
+}
+.add_flex {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 0px;
+}
+.main-datatable .dataTable.no-footer {
+  border-bottom: 1px solid #eee;
+}
+.main-datatable .cust-datatable thead {
+  background-color: #f9f9f9;
+}
+.main-datatable .cust-datatable > thead > tr > th {
+  border-bottom-width: 0;
+  color: #443f3f;
+  font-weight: 600;
+  padding: 16px 15px;
+  vertical-align: middle;
+  padding-left: 18px;
+  text-align: center;
+}
+.main-datatable .cust-datatable > tbody td {
+  padding: 10px 15px 10px 18px;
+  color: #333232;
+  font-size: 13px;
+  font-weight: 500;
+  word-break: break-word;
+  border-color: #eee;
+  text-align: center;
+  vertical-align: middle;
+}
+.main-datatable .cust-datatable > tbody tr {
+  border-top: none;
+}
+.main-datatable .table > tbody > tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.main-datatable .actionCust a {
+  display: inline-block;
+  color: #8a8a8a;
+  font-size: 12px;
+  border: 1px solid #d4d4d4;
+  padding: 10px 11px;
+  margin: -9px 3px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.main-datatable .actionCust a i {
+  color: #8e8e8e;
+  margin: 2px;
+}

@@ -7,18 +7,18 @@
 
     <link rel="stylesheet" href="../css/style.css" />
 
-    <title>Form</title>
+    <title>Form Pengajuan</title>
   </head>
   <body>
     <!-- Form -->
     <div class="container-form" id="form-pengajun">
       <div class="title">Form Pengajuan</div>
       <div class="content">
-        <form action="#">
+        <form action="#" class="form-surat" method="POST">
           <div class="user-details">
             <div class="input-box js">
               <span class="details">Jenis Surat</span>
-              <select name="jk" class="input-box">
+              <select name="jk" class="jk-details">
                 <option value="">Jenis Surat</option>
                 <option value="Skck">Permohonan Rekomendasi SKCK</option>
                 <option value="Pin">Surat Keterangan Pindah</option>
@@ -28,29 +28,29 @@
             </div>
             <div class="input-box">
               <span class="details">Nama Lengkap</span>
-              <input type="text" placeholder="Masukan nama anda" required />
+              <input type="text" placeholder="Masukan nama anda" name="nama" />
             </div>
             <div class="input-box">
               <span class="details">NIK</span>
-              <input type="number" placeholder="Masukan NIK" required />
+              <input type="number" placeholder="Masukan NIK" name="nik" />
             </div>
             <div class="input-box">
               <span class="details">Email</span>
-              <input type="text" placeholder="Masukan email" required />
+              <input type="text" placeholder="Masukan email" name="email" />
             </div>
             <div class="input-box">
               <span class="details">No Handphone</span>
-              <input type="text" placeholder="Masukan no telpon" required />
+              <input type="text" placeholder="Masukan no telpon" name="hp" />
             </div>
           </div>
           <div class="input-box">
             <span class="details">Alamat</span>
-            <textarea type="textarea"></textarea>
+            <textarea type="textarea" name="alamat"></textarea>
           </div>
           <div class="jk-details">
             <input type="radio" name="jk" id="dot-1" />
             <input type="radio" name="jk" id="dot-2" />
-            <span class="jk-title">Jenis Kelamin</span>
+            <span class="jk-title" name="jk">Jenis Kelamin</span>
             <div class="category">
               <label for="dot-1">
                 <span class="dot one"></span>
@@ -63,11 +63,30 @@
             </div>
           </div>
           <div class="button">
-            <input type="submit" value="Simpan" />
+            <input type="submit" value="Simpan" name="proses" />
           </div>
         </form>
       </div>
     </div>
     <!-- Akhir Form -->
+
+  <!-- <?php
+  include "koneksi.php";
+
+  if(isset($_POST['proses'])){
+    mysqli_query($koneksi, "insert into pengajuan set 
+    nama = '$_POST[nama]',
+    nik = '$_POST[nik]',
+    email = '$_POST[email]',
+    hp = '$_POST[hp]',
+    alamat = '$_POST[alamat]',
+    jk = '$_POST[jk]'
+    ");
+
+    echo 'Pengajuan telah tersimpan';
+  }
+
+
+  ?> -->
   </body>
 </html>
