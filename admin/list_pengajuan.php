@@ -52,10 +52,10 @@
                       <td>$tampil[alamat]</td>
                       <td>$tampil[jk]</td>
                       <td>$tampil[jsurat]</td>
-                      <td><a href='form_edit.php?nik=$tampil[nik]'> <span class='actionCust'>
+                      <td><a href='form_edit.php?id=$tampil[id]'> <span class='actionCust'>
                       <i class='far fa-edit'></i></>
                       </span></a></td>
-                      <td><a href='?nik=$tampil[nik]'><span class='actionCust'>
+                      <td><a href='?id=$tampil[id]'><span class='actionCust'>
                       <i class='far fa-trash-alt'></i>
                       </span></a></td>
                       <td><a href='export.php'><span class='actionCust'>
@@ -70,8 +70,8 @@
                 ?>
               </table>
                 <?php
-                if(isset($_GET['nik'])){
-                  mysqli_query($connect, "delete from pengajuan where nik='$_GET[nik]'");
+                if(isset($_GET['id'])){
+                  mysqli_query($connect, "delete from pengajuan where id ='$_GET[id]'");
 
                   echo 'Data terhapus';
                   echo "<meta http-equiv=refresh content=2;URL='list_pengajuan.php'>";
