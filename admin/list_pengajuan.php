@@ -56,9 +56,12 @@
                       <i class='far fa-edit'></i></>
                       </span></a></td>
                       <td><a href='?nik=$tampil[nik]'><span class='actionCust'>
-                      <i class='far fa-trash-alt'></a></i>
-                      </span></td>
-                      <td>Pdf</>                 
+                      <i class='far fa-trash-alt'></i>
+                      </span></a></td>
+                      <td><a href='export.php'><span class='actionCust'>
+                      <i class='fas fa-file-export'></i>  
+                      </span></a></>
+                                     
 
                   </tr>";
 

@@ -16,49 +16,48 @@
 
 <body>
 <div class="container">
-			
-				<div class="data-tables datatable-dark">
-					
-                <table id="filtertable" class="table cust-datatable dataTable no-footer">
-                <thead>
-                  <tr>
-                    <th >No</th>
-                    <th >Nama</th>
-                    <th >NIK</th>
-                    <th >Email</th>
-                    <th >No Handphone</th>
-                    <th >Alamat</th>
-                    <th >Jenis Kelamin</th>
-                    <th >Jenis Surat</th>
-     
-                  </tr>
-                </thead>
-                
-                <?php
-                include "../koneksi.php";
-                $no=1;
-                $ambildata = mysqli_query($connect, "select * from pengajuan");
-                while ($tampil = mysqli_fetch_array($ambildata)){
-                  echo "
-                  <tr>
-                      <td>$no</td>
-                      <td>$tampil[nama]</td>
-                      <td>$tampil[nik]</td>
-                      <td>$tampil[email]</td>
-                      <td>$tampil[hp]</td>
-                      <td>$tampil[alamat]</td>
-                      <td>$tampil[jk]</td>
-                      <td>$tampil[jsurat]</td>
-                                      
+			<h2>Data Pemohon Pengajuan</h2>
+	<div class="data-tables datatable-dark">
+      <table id="filtertable" class="table cust-datatable dataTable no-footer">
+      <thead>
+        <tr>
+          <th >No</th>
+          <th >Nama</th>
+          <th >NIK</th>
+          <th >Email</th>
+          <th >No Handphone</th>
+          <th >Alamat</th>
+          <th >Jenis Kelamin</th>
+          <th >Jenis Surat</th>
 
-                  </tr>";
+        </tr>
+      </thead>
+      
+      <?php
+      include "../koneksi.php";
+      $no=1;
+      $ambildata = mysqli_query($connect, "select * from pengajuan");
+      while ($tampil = mysqli_fetch_array($ambildata)){
+        echo "
+        <tr>
+            <td>$no</td>
+            <td>$tampil[nama]</td>
+            <td>$tampil[nik]</td>
+            <td>$tampil[email]</td>
+            <td>$tampil[hp]</td>
+            <td>$tampil[alamat]</td>
+            <td>$tampil[jk]</td>
+            <td>$tampil[jsurat]</td>
+                            
 
-                  $no++;
-                }
-                ?>
-              </table>
+        </tr>";
+
+        $no++;
+      }
+      ?>
+    </table>
 					
-				</div>
+	</div>
 </div>
 	
 <script>
