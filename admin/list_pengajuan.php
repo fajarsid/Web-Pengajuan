@@ -12,7 +12,7 @@
           <div class="card_body">
             <div class="row d-flex">
               <div class="col-sm-4 createSegment">
-                <a class="btn dim_button create_new"> <span class="glyphicon glyphicon-plus"></span>Tambah Data</a>
+                <a href='form_pengajuan.php' class="btn dim_button create_new"> <span class="glyphicon glyphicon-plus"></span>Tambah Data</a>
               </div>
               <div class="col-sm-8 add_flex">
                 <div class="form-group searchInput">
@@ -33,24 +33,10 @@
                     <th >Alamat</th>
                     <th >Jenis Kelamin</th>
                     <th >Jenis Surat</th>
-                    <th >Action</th>
+                    <th colspan ="3">Aksi</th>
                   </tr>
                 </thead>
-                <!-- <tbody>
-                  <tr>
-                    <td>
-                      <span class="actionCust">
-                        <a href="#"><i class="far fa-edit"></i></a>
-                      </span>
-                      <span class="actionCust">
-                        <a href="#"><i class="far fa-trash-alt"></i></a>
-                      </span>
-                      <span class="actionCust">
-                        <a href="#"><i class="far fa-file-pdf"></i></a>
-                      </span>
-                    </td>
-                  </tr>
-                </tbody> -->
+                
                 <?php
                 include "../koneksi.php";
                 $no=1;
@@ -66,22 +52,32 @@
                       <td>$tampil[alamat]</td>
                       <td>$tampil[jk]</td>
                       <td>$tampil[jsurat]</td>
-                  </tr>              
-                  ";
+                      <td><a href='form_edit.php?nik=$tampil[nik]'> <span class='actionCust'>
+                      <i class='far fa-edit'></i></>
+                      </span></a></td>
+                      <td><a href='?nik=$tampil[nik]'><span class='actionCust'>
+                      <i class='far fa-trash-alt'></a></i>
+                      </span></td>
+                      <td>Pdf</>                 
+
+                  </tr>";
 
                   $no++;
                 }
-
-
-
-
-
-
                 ?>
               </table>
+                <?php
+                if(isset($_GET['nik'])){
+                  mysqli_query($connect, "delete from pengajuan where nik='$_GET[nik]'");
+
+                  echo 'Data terhapus';
+                  echo "<meta http-equiv=refresh content=2;URL='list_pengajuan.php'>";
+                }
+                ?>
             </div>
           </div>
         </div>
       </div>
     </div>
 
+              
