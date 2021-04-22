@@ -88,7 +88,7 @@ $html =
     '<p>Demikian permohonan ini saya buat dengan sebenarnya, apabila terjadi kesalahan data, maka menjadi tanggung jawab saya di daerah / alamat tujuan.</p>'.
     '<br>'.
     '<p style="text-align:right">Sukabumi, '.$date.'</p>'.
-    '<p style="text-align:right; padding-bottom:50px">Permohonan</p>'.
+    '<p style="text-align:right; padding-bottom:70px">Permohonan</p>'.
     '<p style="text-align:right"><u>'.$nama.'</u></p>'.
     '</div>'.
     '</body></html>';
