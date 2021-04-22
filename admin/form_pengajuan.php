@@ -14,7 +14,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   $jk = trim($_POST["jk"]);
   $jsurat = trim($_POST["jsurat"]);
 
-    if($jk){
+    if($nama && $nik && $hp && $email && $alamat && $jk && $jsurat){
         
       $sql = "INSERT INTO pengajuan set 
       nama = '$_POST[nama]',

@@ -58,7 +58,7 @@
                       <td><a href='?id=$tampil[id]'><span class='actionCust'>
                       <i class='far fa-trash-alt'></i>
                       </span></a></td>
-                      <td><a href='export.php'><span class='actionCust'>
+                      <td><a href='export.php?id=$tampil[id]'><span class='actionCust'>
                       <i class='fas fa-file-export'></i>  
                       </span></a></>
                                      
