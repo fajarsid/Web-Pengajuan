@@ -92,11 +92,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
             <div class="input-box">
               <span class="details">Email</span>
-              <input type="text" placeholder="Masukan email" name="email" />
+              <input type="email" placeholder="Masukan email" name="email" />
             </div>
             <div class="input-box">
               <span class="details">No Handphone</span>
-              <input type="text" placeholder="Masukan no telpon" name="hp" />
+              <input type="number" placeholder="Masukan no telpon" name="hp" />
             </div>
           </div>
           <div class="input-box">

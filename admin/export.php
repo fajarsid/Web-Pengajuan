@@ -2,6 +2,7 @@
   include "../koneksi.php";
     $sql=mysqli_query($connect, "SELECT * FROM pengajuan WHERE id ='$_GET[id]'");
     $data=mysqli_fetch_array($sql);
+      
   ?>
 
 <html>
@@ -44,7 +45,7 @@
 <div class="container" style='position: center; width: 800px; height: auto; '>
 <h4>Data Pemohon Pengajuan</h4>
 		<p>Silahkan masukkan No dan Lampiran surat</p>
-		<form action='topdf.php?id=<?php echo $data['id']?>' method="POST">
+		<form action='expdf.php?id=<?php echo $data['id']?>' method="POST">
 		<label>No &nbsp </label><input type="number" name="nos" />
 		<label>Lampiran &nbsp </label><input type="text" name="ls" />
 		<input type="submit" name="kirim" value="Cetak Surat!" />

@@ -99,8 +99,3 @@ $dompdf->render();
 ob_end_clean();
 $dompdf->stream(''.$jsurat.'_'.$nama.'.pdf');
 ?>
-
-<?php 
-      echo "<script>alert('Tidak Boleh Ada Yang Kosong!');</script>";
-      echo "<script>location='index.php';</script>";
-      ?>
