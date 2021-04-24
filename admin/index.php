@@ -1,4 +1,12 @@
+<?php
 
+session_start();
+
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: \Web-Pengajuan\index.php");
+    exit;
+}
+?>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -75,7 +83,7 @@
             </div>
             <div class="sidebar__logout">
               <i class="fa fa-power-off"></i>
-              <a href="#">Log out</a>
+              <a href="logout.php">Log out</a>
             </div>
           </div>
         </div>
