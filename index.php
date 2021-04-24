@@ -28,14 +28,12 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
       <div class="container">
         <div class="login-content">
           <form action="auth.php" method="post">
-            <img src="img/users.png" />
             <h2 class="title">Selamat Datang</h2>
             <div class="input-div one">
               <div class="i">
                 <i class="fas fa-user"></i>
               </div>
               <div class="div">
-                <h5>Username</h5>
                 <input type="text" name="username" class="input" />
               </div>
             </div>
@@ -44,19 +42,14 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
                 <i class="fas fa-lock"></i>
               </div>
               <div class="div">
-                <h5>Password</h5>
                 <input type="password" name="password" class="input" />
               </div>
             </div>
-            <a href="#">Lupa Password?</a>
             <input type="submit" class="btn" value="Login" />
           </form>
         </div>
       </div>
     </section>
     <!-- Akhir Login -->
-
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/login.js"></script>
   </body>
 </html>
