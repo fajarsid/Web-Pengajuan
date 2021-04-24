@@ -1,3 +1,14 @@
+<?php
+// Initialize the session
+session_start();
+ 
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+  header('location:admin/index.php');
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,23 +22,12 @@
     <title>Login</title>
   </head>
   <body>
-    <?php
-    if(isset($_GET['pesan'])){
-      if($_GET['pesan'] == "gagal"){
-      echo "Login gagal! username dan password salah!";
-      }else if($_GET['pesan'] == "logout"){
-      echo "Anda telah berhasil logout";
-      }else if($_GET['pesan'] == "belum_login"){
-      echo "Anda harus login untuk mengakses halaman admin";
-      }
-    }
-    ?>
 
     <!-- Form Login -->
     <section>
       <div class="container">
         <div class="login-content">
-          <form action="auth.php" method="post" onSubmit="return validasi ()">
+          <form action="auth.php" method="post">
             <img src="img/users.png" />
             <h2 class="title">Selamat Datang</h2>
             <div class="input-div one">
@@ -36,7 +36,7 @@
               </div>
               <div class="div">
                 <h5>Username</h5>
-                <input type="text" class="input" />
+                <input type="text" name="username" class="input" />
               </div>
             </div>
             <div class="input-div pass">
@@ -45,7 +45,7 @@
               </div>
               <div class="div">
                 <h5>Password</h5>
-                <input type="password" class="input" />
+                <input type="password" name="password" class="input" />
               </div>
             </div>
             <a href="#">Lupa Password?</a>
