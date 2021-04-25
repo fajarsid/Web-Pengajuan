@@ -53,14 +53,77 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 ?>
 
-<link rel="stylesheet" href="../css/style.css" />
-<title>Form Pengajuan</title>
 
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- css -->
+   <link rel="stylesheet" href="../css/style.css">
+   
+    <!-- Link Tabels -->
+   <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.14/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,800&display=swap" rel="stylesheet" />
+   <title>Form Pengajuan</title>
+ </head>
+ <body>
+    <!-- Sidebar -->
+    <nav class="main-menu">
+      <ul>
+          <li>
+              <a href="index.php">
+                  <i class="fa fa-home fa-2x"></i>
+                  <span class="nav-text">
+                      Dashboard
+                  </span>
+              </a>
+            
+          </li>
+          <li class="has-subnav">
+              <a href="index.php">
+                <i class="fa fa-table fa-2x"></i>
+                  <span class="nav-text">
+                      List Pengajuan
+                  </span>
+              </a>
+          </li>
+          <li class="has-subnav">
+              <a href="form_pengajuan.php">
+                  <i class="fa fa-list fa-2x"></i>
+                  <span class="nav-text">
+                      Form
+                  </span>
+              </a>
+          </li>
+      </ul>
+      <ul class="logout">
+          <li>
+              <a href="logout.php">
+                    <i class="fa fa-power-off fa-2x"></i>
+                  <span class="nav-text">
+                      Logout
+                  </span>
+              </a>
+          </li>  
+      </ul>
+    </nav>
+    <!-- Akhir Sidebar -->
+
+    
     <!-- Form -->
     <div class="container-form" id="form-pengajun">
-      <div class="title">Form Pengajuan</div>
       <div class="content">
       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" class="form-surat" method="post">
+      <div class="title">Form Pengajuan</div>
           <div class="user-details">
             <div class="input-box js">
               <span class="details">Jenis Surat</span>
@@ -103,21 +166,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <span class="details">Alamat</span>
             <textarea rows="5" cols="80" type="textarea" name="alamat"></textarea>
           </div>
-          <!-- <div class="jk-details">
-            <input type="radio" name="jk" id="dot-1" value="Laki-Laki"/>
-            <input type="radio" name="jk" id="dot-2" value="Perempuan"/>
-            <span class="jk-title">Jenis Kelamin</span>
-            <div class="category">
-              <label for="dot-1">
-                <span class="dot one"></span>
-                <span>Laki-Laki</span>
-              </label>
-              <label for="dot-2">
-                <span class="dot two"></span>
-                <span>Perempuan</span>
-              </label>
-            </div>
-          </div> -->
           <div class="button">
             <input type="submit" value="Simpan" />
           </div>
@@ -125,3 +173,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       </div>
     </div>
     <!-- Akhir Form -->
+
+ </body>
+</html>
+    
