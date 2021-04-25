@@ -54,21 +54,6 @@
             <span class="details">Alamat</span>
             <textarea type="textarea" rows="5" cols="80" name="alamat" value="<?php echo $data['alamat']; ?>"><?php echo $data['alamat']; ?></textarea>
           </div>
-          <!-- <div class="jk-details">
-            <input type="radio" id="dot-1" />
-            <input type="radio" id="dot-2" />
-            <span class="jk-title" name="jk" value="">Jenis Kelamin</span>
-            <div class="category">
-              <label for="dot-1">
-                <span class="dot one"></span>
-                <span class="jk">Laki-Laki</span>
-              </label>
-              <label for="dot-2">
-                <span class="dot two"></span>
-                <span class="jk">Perempuan</span>
-              </label>
-            </div>
-          </div> -->
           <div class="button">
             <input type="submit" value="Simpan" name="proses" />
           </div>
