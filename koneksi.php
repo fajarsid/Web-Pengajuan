@@ -1,7 +1,12 @@
 <?php
-$dbhost = 'localhost';
-$dbuser = 'root';
-$dbpass = '';
-$dbname = 'dbpengajuan';
-$connect = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname) or die('koneksi gagal');
+ if(!isset($_SESSION)) 
+ { 
+     session_start(); 
+ } 
+
+// koneksi ke database
+$connect = mysqli_connect("localhost","root","","dbpengajuan" );
+//   if($connect){
+//         echo 'Berhasil';
+//     }
 ?>

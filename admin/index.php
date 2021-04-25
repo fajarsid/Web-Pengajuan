@@ -1,11 +1,6 @@
 <?php
-
-session_start();
-
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: ../index.php");
-    exit;
-}
+require '../koneksi.php';
+require '../auth.php';
 ?> 
  
  
@@ -47,7 +42,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
     <!-- Sidebar -->
     <!-- <div class="area"></div> -->
-    <nav class="main-menu">
+    <nav class="main-menu left">
       <ul>
           <li>
               <a href="#">
@@ -144,8 +139,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                             <td><a href='export.php?id=$tampil[id]'><span class='actionCust'>
                             <i class='fas fa-file-export'></i>  
                             </span></a></>
-                                          
-
                         </tr>";
 
                         $no++;
