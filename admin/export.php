@@ -2,6 +2,25 @@
   include "../koneksi.php";
     $sql=mysqli_query($connect, "SELECT * FROM pengajuan WHERE id ='$_GET[id]'");
     $data=mysqli_fetch_array($sql);
+
+    $ketSurat = '';
+    if(!empty($data['jsurat'])) {
+        if ($data['jsurat'] == 'SKTP') {
+          $ketSurat = "Surat Keterangan KTP";
+        } else if ($data['jsurat'] == 'SKP') {
+          $ketSurat = "Surat Keterangan Pindah";
+        } else if ($data['jsurat'] == 'SKD') {
+          $ketSurat = "Surat Keterangan Domisili";
+        } else if ($data['jsurat'] == 'KK') {
+          $ketSurat = "Kartu Keluarga";
+        } else if ($data['jsurat'] == 'AL') {
+          $ketSurat = "Akta Lahir";
+        } else if ($data['jsurat'] == 'AK') {
+          $ketSurat = "Akta Kematian";
+        }
+    } else {
+      echo 'kosong';
+    }
       
   ?>
 
@@ -95,7 +114,7 @@
     </tr>
     <tr>
         <td>Jenis Surat</td>
-        <td>: &nbsp <?php echo $data['jsurat']; ?></td>
+        <td>: &nbsp <?php echo $ketSurat; ?></td>
     </tr>
 </table>
 <p></p>

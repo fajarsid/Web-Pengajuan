@@ -16,13 +16,13 @@
             <div class="input-box js">
               <span class="details">Jenis Surat</span>
               <select name="jsurat" class="jk-details" value="<?php echo $data['jsurat']; ?>">
-                <option value="<?php echo $data['nama']; ?>"><?php echo $data['nama']; ?></option>
-                <option value="Skck">Surat Keterangan KTP</option>
-                <option value="Pin">Surat Keterangan Pindah</option>
-                <option value="dom">Surat Keterangan Domisili</option>
-                <option value="Rt">Kartu Keluarga</option>
-                <option value="Rt">Akta Kelahiran</option>
-                <option value="Rt">Akta Kematian</option>
+                <option value="<?php echo $data['jsurat']; ?>"><?php echo $data['jsurat']; ?></option>
+                <option value="SKTP">Surat Keterangan KTP</option>
+                <option value="SKP">Surat Keterangan Pindah</option>
+                <option value="SKD">Surat Keterangan Domisili</option>
+                <option value="KK">Kartu Keluarga</option>
+                <option value="AL">Akta Kelahiran</option>
+                <option value="AK">Akta Kematian</option>
               </select>
             </div>
             <div class="input-box js">
@@ -78,6 +78,6 @@
     ");
 
     echo 'Pengajuan telah diedit';
-    echo "<meta http-equiv=refresh content=1;URL='list_pengajuan.php'>";
+    echo "<meta http-equiv=refresh content=1;URL='index.php'>";
   }
   ?> 

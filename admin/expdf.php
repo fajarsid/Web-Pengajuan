@@ -3,16 +3,34 @@
   $sql=mysqli_query($connect, "SELECT * FROM pengajuan WHERE id ='$_GET[id]'");
   $data=mysqli_fetch_array($sql);
 
-$nos = str_replace(" ", "_", strtolower($_POST['nos']));
-$ls = $_POST['ls'];
-$date = date("d M Y");
-$no = $_POST['nos'] . date(" / Y");
-$nama = $data['nama'];
-$jk = $data['jk'];
-$nik = $data['nik'];
-$alamat = $data['alamat'];
-$email = $data['email'];
-$jsurat = $data['jsurat'];
+  $ketSurat = '';
+  if(!empty($data['jsurat'])) {
+      if ($data['jsurat'] == 'SKTP') {
+        $ketSurat = "Surat Keterangan KTP";
+      } else if ($data['jsurat'] == 'SKP') {
+        $ketSurat = "Surat Keterangan Pindah";
+      } else if ($data['jsurat'] == 'SKD') {
+        $ketSurat = "Surat Keterangan Domisili";
+      } else if ($data['jsurat'] == 'KK') {
+        $ketSurat = "Kartu Keluarga";
+      } else if ($data['jsurat'] == 'AL') {
+        $ketSurat = "Akta Lahir";
+      } else if ($data['jsurat'] == 'AK') {
+        $ketSurat = "Akta Kematian";
+      }
+  } else {
+    echo 'kosong';
+  }
+
+  $nos = str_replace(" ", "_", strtolower($_POST['nos']));
+  $ls = !empty($_POST['ls']) ? $_POST['ls'] : "-";
+  $date = date("d M Y");
+  $no = !empty($_POST['nos']) ? $_POST['nos'] . date(" / Y") : "-";
+  $nama = $data['nama'];
+  $jk = $data['jk'];
+  $nik = $data['nik'];
+  $alamat = $data['alamat'];
+  $email = $data['email'];
 
 require_once("dompdf/dompdf_config.inc.php");
 
@@ -80,7 +98,7 @@ $html =
     '</tr>'.
     '<tr>'.
     '<td>Jenis Surat</td>'.
-    '<td>: '.$jsurat.'</td>'.
+    '<td>: '.$ketSurat.'</td>'.
     '</tr>'.
     '</table>'.
     '<br>'.
@@ -97,5 +115,5 @@ $dompdf = new DOMPDF();
 $dompdf->load_html($html);
 $dompdf->render();
 ob_end_clean();
-$dompdf->stream(''.$jsurat.'_'.$nama.'.pdf');
+$dompdf->stream(''.$ketSurat.' Atas Nama '.$nama.'.pdf');
 ?>
